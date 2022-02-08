@@ -1,12 +1,10 @@
-:root {
-  --color1: #3c493f;
-  --color2: #7e8d85;
-  --color3: #b3bfb8;
-  --color4: #f0f7f4;
-  --color5: #a2e3c4;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import "./style/variables";
 
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Nunito', sans-serif;
+  color: $theme-text-color;
 }
