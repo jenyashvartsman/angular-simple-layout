@@ -13,20 +13,21 @@ $transition-speed: 500ms;
     right: 0;
     bottom: 0;
     background-color: $theme-container-bg;
-    padding: 10px 15px;
+    padding: 10px 25px;
     transition: left $transition-speed;
   }
 
   .app-header {
     position: fixed;
     top: 0;
-    left: $sidebar-width;
+    left: 0;
     right: 0;
     height: $header-height;
     background-color: $theme-header-bg;
-    padding: 0 15px;
+    padding: 0 35px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     transition: left $transition-speed;
     z-index: 2;
     box-shadow: rgb(17 12 46 / 15%) 0 5px 10px 0;
@@ -36,7 +37,6 @@ $transition-speed: 500ms;
       border-radius: 50%;
       padding: 4px;
       transition: transform .5s;
-      margin-right: 10px;
       font-size: 24px;
 
       &:hover {
@@ -47,7 +47,7 @@ $transition-speed: 500ms;
 
   .app-sidebar {
     position: fixed;
-    top: 0;
+    top: $header-height;
     width: $sidebar-width;
     height: 100vh;
     background-color: $theme-sidebar-bg;
@@ -58,7 +58,7 @@ $transition-speed: 500ms;
     ul {
       margin: 0;
       list-style-type: none;
-      padding: $header-height 20px;
+      padding: 10px 20px;
 
       li a {
         margin: 10px 0;
@@ -105,9 +105,7 @@ $transition-speed: 500ms;
 
   &.sidebar-open {
     .app-header {
-      left: $sidebar-width-small;
-
-      em {
+      .sidebar-btn {
         transform: rotate(180deg);
       }
     }

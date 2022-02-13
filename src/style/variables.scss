@@ -5,6 +5,13 @@
   --theme-text-color: #515C66;
 }
 
+.dark {
+  --theme-header-bg: #434B54;
+  --theme-sidebar-bg: #434B54;
+  --theme-container-bg: #343C43;
+  --theme-text-color: #CDD2DB;
+}
+
 /* theme */
 $theme-header-bg: var(--theme-header-bg);
 $theme-sidebar-bg: var(--theme-sidebar-bg);

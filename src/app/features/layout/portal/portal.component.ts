@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../../../core/services/theme.service';
 
 interface ISidebarNavItem {
   icon: string;
@@ -23,4 +24,11 @@ export class PortalComponent {
   ];
 
   sidebarOpen = false;
+
+  constructor(private readonly themeService: ThemeService) {
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme()
+  }
 }
