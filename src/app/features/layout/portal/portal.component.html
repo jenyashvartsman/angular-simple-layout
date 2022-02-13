@@ -1,4 +1,12 @@
 <div class="portal" [class.sidebar-open]="sidebarOpen">
+  <!-- header -->
+  <header class="app-header">
+    <em class="material-icons" (click)="sidebarOpen = !sidebarOpen">
+      keyboard_double_arrow_left
+    </em>
+    <h3>XYZ</h3>
+  </header>
+
   <!-- sidebar -->
   <nav class="app-sidebar">
     <ul>
@@ -11,17 +19,8 @@
     </ul>
   </nav>
 
-  <main>
-    <!-- header -->
-    <header class="app-header">
-      <em class="material-icons" (click)="sidebarOpen = !sidebarOpen">
-        keyboard_double_arrow_left
-      </em>
-      <h3>XYZ</h3>
-    </header>
-
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
+  <!--  content-->
+  <main class="container">
+    <router-outlet></router-outlet>
   </main>
 </div>

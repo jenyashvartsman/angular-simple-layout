@@ -3,25 +3,18 @@
 $transition-speed: 500ms;
 
 .portal {
-  min-height: 100vh;
   position: relative;
 
-  > main {
-    > .container {
-      position: fixed;
-      overflow-y: auto;
-      top: $header-height;
-      left: $sidebar-width;
-      right: 0;
-      bottom: 0;
-
-      /*margin-top: $header-height;
-      margin-left: $sidebar-width;*/
-
-      background-color: $theme-container-bg;
-      padding: 10px 15px;
-      transition: left $transition-speed;
-    }
+  > main.container {
+    position: fixed;
+    overflow-y: auto;
+    top: $header-height;
+    left: $sidebar-width;
+    right: 0;
+    bottom: 0;
+    background-color: $theme-container-bg;
+    padding: 10px 15px;
+    transition: left $transition-speed;
   }
 
   .app-header {
@@ -36,7 +29,7 @@ $transition-speed: 500ms;
     align-items: center;
     transition: left $transition-speed;
     z-index: 2;
-    box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+    box-shadow: rgb(17 12 46 / 15%) 0 5px 10px 0;
 
     em {
       cursor: pointer;
@@ -44,6 +37,7 @@ $transition-speed: 500ms;
       padding: 4px;
       transition: transform .5s;
       margin-right: 10px;
+      font-size: 24px;
 
       &:hover {
         background-color: $theme-container-bg;
@@ -57,32 +51,31 @@ $transition-speed: 500ms;
     width: $sidebar-width;
     height: 100vh;
     background-color: $theme-sidebar-bg;
-    transition: rotate $transition-speed, width $transition-speed;
-    flex-shrink: 0;
+    transition: width $transition-speed;
+    overflow-y: auto;
 
     /* nav list */
     ul {
       margin: 0;
       list-style-type: none;
-      padding-top: $header-height;
-      padding-left: 20px;
+      padding: $header-height 20px;
 
       li a {
         margin: 10px 0;
         padding: 15px 20px;
-        border-bottom-left-radius: 32px;
-        border-top-left-radius: 32px;
+        border-radius: 8px;
         color: $sidebar-color;
         text-decoration: none;
         display: flex;
         align-items: center;
 
         em {
-          margin-right: 10px;
+          font-size: 24px;
         }
 
         span {
-          transition: all $transition-speed ease-in-out;
+          margin-left: 10px;
+          transition: opacity $transition-speed ease-in-out;
           opacity: 1;
           height: 100%;
           overflow: hidden;
@@ -114,7 +107,7 @@ $transition-speed: 500ms;
     .app-header {
       left: $sidebar-width-small;
 
-      em  {
+      em {
         transform: rotate(180deg);
       }
     }
@@ -130,10 +123,8 @@ $transition-speed: 500ms;
       }
     }
 
-    > main {
-      > .container {
-        left: $sidebar-width-small;
-      }
+    > main.container {
+      left: $sidebar-width-small;
     }
   }
 }
