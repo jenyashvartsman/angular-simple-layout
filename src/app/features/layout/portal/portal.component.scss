@@ -5,7 +5,7 @@ $transition-speed: 500ms;
 .portal {
   position: relative;
 
-  > main.container {
+  .app-container {
     position: fixed;
     overflow-y: auto;
     top: $header-height;
@@ -13,7 +13,7 @@ $transition-speed: 500ms;
     right: 0;
     bottom: 0;
     background-color: $theme-container-bg;
-    padding: 10px 25px;
+    padding: 20px 25px;
     transition: left $transition-speed;
   }
 
@@ -121,7 +121,7 @@ $transition-speed: 500ms;
       }
     }
 
-    > main.container {
+    .app-container {
       left: $sidebar-width-small;
     }
   }

@@ -3,6 +3,7 @@
   --theme-sidebar-bg: #3C4962;
   --theme-container-bg: #EDF3F9;
   --theme-text-color: #515C66;
+  --theme-card-bg: #FDFEFF;
 }
 
 .dark {
@@ -10,6 +11,7 @@
   --theme-sidebar-bg: #434B54;
   --theme-container-bg: #343C43;
   --theme-text-color: #CDD2DB;
+  --theme-card-bg: #434B54;
 }
 
 /* theme */
@@ -17,6 +19,7 @@ $theme-header-bg: var(--theme-header-bg);
 $theme-sidebar-bg: var(--theme-sidebar-bg);
 $theme-container-bg: var(--theme-container-bg);
 $theme-text-color: var(--theme-text-color);
+$theme-card-bg: var(--theme-card-bg);
 
 /* layout */
 $header-height: 54px;

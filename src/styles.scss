@@ -8,3 +8,10 @@ body {
   font-family: 'Nunito', sans-serif;
   color: $theme-text-color;
 }
+
+.card {
+  background-color: $theme-card-bg;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+}
