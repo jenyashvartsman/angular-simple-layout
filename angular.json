@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/style/util.scss",
               "src/styles.scss"
             ],
             "scripts": []
